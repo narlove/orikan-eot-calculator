@@ -2,7 +2,7 @@ name: Deploy Static React Site
 
 on:
   push:
-    branches: ["production"] # Triggers on push to your main branch
+    branches: ["main"] # Triggers on push to your main branch
   workflow_dispatch: # Allows you to trigger the build manually
 
 permissions:
