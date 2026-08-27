@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://narlove.github.io/orikan-eot-calculator",
+  "homepage": "https://cctools.narlove-programming.com",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
