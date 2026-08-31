@@ -2,11 +2,10 @@ interface Council
 {
     code: string;
     frequencies: string[];
-    canUseInstalmentNumber: boolean; // number of instalments
-    canUseInstalmentPrice: boolean; // the price of the instalmenets
-    confirmIsMultipleInfringements: boolean; // if we need to check whether there are multiple pins
-    maxOutstandingOnOnePin: number; // we will hard cap at this number and raise an error if it is unticked "is multiple infringements"
-    maxOutstandingOnMultiplePin: number; // we will 
+    canUseInstalmentNumber: boolean;
+    canUseInstalmentPrice: boolean;
+    maxOutstandingOnOnePin: number;
+    maxOutstandingOnMultiplePin: number;
 }
 
 const Brisbane: Council = {
