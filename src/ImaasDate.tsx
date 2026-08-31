@@ -1,6 +1,6 @@
 import { useState } from "react";
 import dayjs from 'dayjs';
-import './App.css';
+import './Eot.css';
 import { FaRegFloppyDisk } from 'react-icons/fa6';
 
 interface IProps

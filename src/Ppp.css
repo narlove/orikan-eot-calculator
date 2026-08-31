@@ -1,0 +1,285 @@
+:root {
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  color: #1d2939;
+  background: #eef3f8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    linear-gradient(135deg, rgba(220, 232, 244, 0.72), transparent 42%),
+    #f6f8fb;
+}
+
+.app-shell {
+  width: min(100% - 40px, 920px);
+  margin: 0 auto;
+  padding: 72px 0 96px;
+}
+
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 34px;
+}
+
+.brand-mark {
+  display: grid;
+  flex: 0 0 52px;
+  height: 52px;
+}
+
+.eyebrow,
+.section-kicker {
+  margin: 0 0 7px;
+  color: #1769aa;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0px;
+}
+
+h1 {
+  margin-bottom: 8px;
+  color: #132238;
+  font-size: clamp(30px, 4vw, 42px);
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+.page-intro {
+  max-width: 560px;
+  margin-bottom: 0;
+  color: #66758a;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.calculator-card {
+  overflow: hidden;
+  border: 1px solid #dce4ed;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 18px 48px rgba(31, 52, 73, 0.09);
+}
+
+.form-block {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+  column-gap: 28px;
+  min-height: 78px;
+  align-items: center;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.form-block:last-child {
+  border-bottom: 0;
+}
+
+.form-control {
+  grid-column: 2 / 4;
+  width: 100%;
+}
+
+.form-block label {
+  grid-column: 1;
+  color: #344054;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.form-block label span {
+  color: #8a98a9;
+  font-weight: 500;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: minmax(210px, 0.8fr) minmax(260px, 1.1fr) max-content;
+  padding: 8px 32px 20px;
+  align-items: center;
+}
+
+.inline-toggle {
+  margin: 0 3px;
+  padding: 1px 4px;
+  border: 0;
+  border-bottom: 1px solid #8bb9d7;
+  color: #1769aa;
+  background: transparent;
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+  transition: color 150ms ease, border-color 150ms ease, background 150ms ease;
+}
+
+.inline-toggle:hover {
+  border-bottom-color: #1769aa;
+  color: #0f4f82;
+  background: #eef7fc;
+}
+
+.inline-toggle:focus-visible {
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(56, 138, 195, 0.14);
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 42px;
+  padding: 0 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  color: #1d2939;
+  background: #ffffff;
+  font: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+/* remove the little numbers on the side of the number input box */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input:focus,
+.money-input-container input[type="number"]:focus {
+  border-color: #0066cc;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 102, 204, 0.3);
+}
+
+input:disabled
+{
+  background-color: #E0E0E0;
+}
+
+.money-input-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.per-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.per-container .money-input-container {
+  min-width: 0;
+  flex: 1;
+}
+
+#numberpins {
+  width: 4.5rem;
+  flex: 0 0 4.5rem;
+}
+
+.money-input-container input[type="number"] {
+  width: 100%;
+  padding: 10px 12px 10px 30px; /* Extra left padding to make room for the symbol */
+  font-size: 14px;
+  text-align: right; /* Standard accounting format */
+  border: 1px solid #ccc;
+  border-radius: 9px;
+}
+
+.currency-symbol {
+  position: absolute;
+  left: 12px;
+  color: #666;
+  font-size: 14px;
+  pointer-events: none; /* Allows users to click "through" the symbol */
+}
+
+#pinIssueDate .MuiFormControl-root {
+  width: 100%;
+}
+
+#pinIssueDate .MuiInputBase-root {
+  min-height: 42px;
+  border-radius: 9px;
+  font-size: 14px;
+}
+
+#pinIssueDate .MuiOutlinedInput-root {
+  padding: 0;
+}
+
+#pinIssueDate .MuiOutlinedInput-input {
+  height: 42px;
+  padding: 0 13px;
+  font-size: 14px;
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    width: min(100% - 28px, 920px);
+    padding: 36px 0 56px;
+  }
+
+  .page-header {
+    margin-bottom: 26px;
+  }
+
+  .brand-mark {
+    flex-basis: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+
+  .card-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 24px 20px 20px;
+  }
+
+  .grid-wrapper {
+    grid-template-columns: 1fr;
+    padding: 4px 20px 14px;
+  }
+
+  .form-block {
+    grid-template-columns: 1fr;
+    gap: 9px;
+    min-height: 0;
+    padding: 16px 0;
+  }
+
+  .form-block label,
+  .form-control,
+  .form-adjustment {
+    grid-column: 1;
+  }
+
+  .form-block:has(.form-adjustment) .form-control {
+    grid-column: 1;
+  }
+}
