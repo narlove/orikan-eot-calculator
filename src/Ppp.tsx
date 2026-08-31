@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import './Ppp.css';
 import dayjs from 'dayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
@@ -6,7 +6,7 @@ import { Brisbane, Geelong, Hume, PortPhillip, Stonnington, type Council } from 
 
 function Ppp()
 {
-    const selectRef = useRef(null);
+    // const selectRef = useRef(null);
 
     const frequencies = [
         "week",
