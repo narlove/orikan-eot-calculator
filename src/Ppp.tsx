@@ -2,12 +2,11 @@ import { useState } from 'react';
 import './Ppp.css';
 import dayjs from 'dayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import { Brisbane, Geelong, Hume, PortPhillip, Stonnington, type Council } from './Council';
+// import { Brisbane, Geelong, Hume, PortPhillip, Stonnington, type Council } from './Council';
+import { Brisbane, type Council } from './Council';
 
 function Ppp()
 {
-    // const selectRef = useRef(null);
-
     const frequencies = [
         "week",
         "fortnight",
@@ -44,21 +43,21 @@ function Ppp()
             case "BC":
                 setActiveCouncil(Brisbane);
                 break;
-            case "ST":
-                setActiveCouncil(Stonnington);
-                break;
-            case "PP":
-                setActiveCouncil(PortPhillip);
-                break;
-            case "HU":
-                setActiveCouncil(Hume);
-                break
-            case "GC":
-                // TODO: ACTIVE FREQUENCY ADJUSTING LATE MAY BE A PROBLEM IN THE FUTURE.
-                setActiveCouncil(Geelong);
-                setActiveFreq("fortnight");
-                setStartDate(dayjs().add(getDaysToAdd('fortnight'), 'day'));
-                break;
+            // case "ST":
+            //     setActiveCouncil(Stonnington);
+            //     break;
+            // case "PP":
+            //     setActiveCouncil(PortPhillip);
+            //     break;
+            // case "HU":
+            //     setActiveCouncil(Hume);
+            //     break
+            // case "GC":
+            //     // TODO: ACTIVE FREQUENCY ADJUSTING LATE MAY BE A PROBLEM IN THE FUTURE.
+            //     setActiveCouncil(Geelong);
+            //     setActiveFreq("fortnight");
+            //     setStartDate(dayjs().add(getDaysToAdd('fortnight'), 'day'));
+            //     break;
         }
     }
     
@@ -99,11 +98,21 @@ function Ppp()
                         <div className="form-control">
                             <select name="council" id="council" onChange={e => setActiveCouncilByCode((e.target as HTMLSelectElement).value)}>
                                 <option value="BC">Brisbane</option>
-                                <option value="GC">Geelong</option>
+                                {/* <option value="GC">Geelong</option>
                                 <option value="HU">Hume</option>
                                 <option value="PP">Port Phillip</option>
-                                <option value="ST">Stonnington</option>
+                                <option value="ST">Stonnington</option> */}
                             </select>
+                        </div>
+                    </div>
+                    <div className="form-block">
+                        <label htmlFor="addPin">Add infringement</label>
+                        <div className="form-control">
+                            <div className="input-option-container">
+                                <button type="button" className="input-option">Add one</button>
+                                <button type="button" className="input-option">Add multiple (values)</button>
+                                <button type="button" className="input-option">Add multiple (CSV)</button>
+                            </div>
                         </div>
                     </div>
                     <div className="form-block">
@@ -112,17 +121,17 @@ function Ppp()
                             <div className="per-container">
                                 <div className="money-input-container">
                                     <span className="currency-symbol" aria-hidden="true">$</span>
-                                    <input type="number" name="outstanding" id="outstanding" />
+                                    <input readOnly type="number" name="outstanding" id="outstanding" />
                                 </div>
 
                                 <span>across</span>
 
-                                <input type="number" name="numberpins" id="numberpins" />
+                                <input readOnly type="number" name="numberpins" id="numberpins" />
                                 <span>infringements</span>
                             </div>
                         </div>
                     </div>
-                    <div className="form-block">
+                    {/* <div className="form-block">
                         <label htmlFor="freq">Preferred frequency</label>
                         <div className="form-control">
                             <select name="freq" id="freq" onChange={e => {
@@ -159,8 +168,8 @@ function Ppp()
                         </div>
                     </div>
                     <div className="form-block">
-                        <label htmlFor="pinIssueDate">Infringement issued date</label>
-                        <div id="pinIssueDate" className="form-control">
+                        <label htmlFor="offenceDate">Offence date</label>
+                        <div id="offenceDate" className="form-control">
                             <DatePicker
                                 defaultValue={dayjs()}
                                 label="PIN issue date"
@@ -179,7 +188,7 @@ function Ppp()
                                 closeOnSelect={true}
                             ></DatePicker>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </section>
             <section className="schedule-table">

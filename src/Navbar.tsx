@@ -26,8 +26,8 @@ function Navbar()
                     <div className="top-navbar__links">
                         <NavLink to="/" end className={navLinkClass}>Dashboard</NavLink>
                         <NavLink to="/eot" className={navLinkClass}>EOT Calculator</NavLink>
-                        {/* <NavLink to="/ppp" className={navLinkClass}>PPP calculator</NavLink> */}
-                        <button className={navLinkClass({ isActive: false }).concat(" top-navbar__link--disabled")}>PPP Calculator</button>
+                        <NavLink to="/ppp" className={navLinkClass}>PPP calculator</NavLink>
+                        {/* <button className={navLinkClass({ isActive: false }).concat(" top-navbar__link--disabled")}>PPP Calculator</button> */}
                         <button className={navLinkClass({ isActive: false }).concat(" top-navbar__link--disabled")}>Advanced Escalations</button>
                         <a
                             className="github-referral"

@@ -157,6 +157,38 @@ select {
   transition: border-color 150ms ease, box-shadow 150ms ease;
 }
 
+.input-option-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-option {
+  min-height: 42px;
+  padding: 13px;
+  display: inline-flex;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  color: #1d2939;
+  background: #ffffff;
+  font: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+.input-option:hover {
+  border-color: #0066cc;
+  background: rgba(44, 118, 182, 0.08);
+}
+
+.input-option:active {
+  border-color: #0066cc;
+  background: rgba(237, 243, 248, 0.8);
+  color: #143c61;
+  box-shadow: inset 0 0 0 1px rgba(17, 109, 171, 0.08);
+}
+
 /* remove the little numbers on the side of the number input box */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
